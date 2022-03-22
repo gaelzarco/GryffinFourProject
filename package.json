@@ -17,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/cbibbs94/GryffinFourProject/issues"
   },
-  "homepage": "https://github.com/cbibbs94/GryffinFourProject#readme"
+  "homepage": "https://github.com/cbibbs94/GryffinFourProject#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-react-views": "^0.11.0",
+    "mongoose": "^6.2.7",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
 }
