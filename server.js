@@ -7,10 +7,12 @@ const PORT = process.env.PORT
 const app = express()
 
 //Routes
-app.get('/', (req, res) => {
-    res.send('MadLibbing is on the way! Hold YA horses')
+app.get('/api', (req, res) => {
+    res.json({
+        message: 'GryffinFOUR BACKEND IS SUCCESSFULLY CONNECTED',
+    })
 })
 
 app.listen(PORT, () => {
-    console.log("Ooh snaps! We're live folks!!")
+    console.log(`Ooh snaps! We're live on port ${PORT} folks!!`)
 })
