@@ -1,0 +1,19 @@
+const mongoose = require('mongoose')
+const {Schema} = mongoose
+
+//Genre Schema
+const genreSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+        enum: ['Scary', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Referece', 'Song Reference', 'Other' ]
+    },
+    
+}, {toJSON: { virtuals: true }})
+
+//Virtuals aka child association
+
+
+//model and Exports
+const Genre = mongoose.model('Genre', genreSchema)
+module.exports = Genre
