@@ -12,7 +12,12 @@ const genreSchema = new Schema({
 }, {toJSON: { virtuals: true }})
 
 //Virtuals aka child association
+genreSchema.virtual('madlibs', {
+    ref: 'Madlib',
+    localField: '_id',
+    foreignfield: 'genre'
 
+})
 
 //model and Exports
 const Genre = mongoose.model('Genre', genreSchema)
