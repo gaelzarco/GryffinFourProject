@@ -8,5 +8,5 @@ madlibs.get('/', (req, res) => {
     })
 })
 
-module.export = madlibs
+module.exports = madlibs
 
