@@ -1,9 +1,9 @@
 export default function MadlibHome() {
-    const renderMadList = () => {
-        if(category) {
-            
-        }
-    }
+    // const renderMadList = () => {
+    //     if() {
+
+    //     }
+    // }
 
     return(
         <div>
