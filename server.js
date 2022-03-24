@@ -1,6 +1,6 @@
 //Dependencies
 const express = require('express')
-const mongoose = require('mongoose')
+
 
 //Configs and App Initilization
 require('dotenv').config()
@@ -8,9 +8,9 @@ const PORT = process.env.PORT
 const app = express()
 
 //MiddleWare
-mongoose.connect(process.env.Mongo_URI, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
-    console.log("Data sittin' at" , process.env.Mongo_URI)
-})
+// mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
+//     console.log("Data sittin' at" , process.env.MONGO_URI)
+// })
 
 
 
