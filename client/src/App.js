@@ -1,4 +1,5 @@
 import './App.css';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import MadlibHome from './components/MadlibHome';
 
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>WELCOME TO MILESTONE 2</h1>
+      <h1>WELCOME TO MADLIB MADNESS</h1>
       {value}
       
       <MadlibHome />
