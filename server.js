@@ -6,6 +6,10 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 
+
+
+
+
 //Routes
 app.get('/api', (req, res) => {
     res.json({
@@ -13,6 +17,12 @@ app.get('/api', (req, res) => {
     })
 })
 
+//Madlibs Controller
+const madlibsController = require('./controllers/madlib_controllers')
+app.use('/madlibs', madlibsController)
+
+
+// Port to listen on
 app.listen(PORT, () => {
     console.log(`Ooh snaps! We're live on port ${PORT} folks!!`)
 })

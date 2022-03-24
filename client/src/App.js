@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <h1>WELCOME TO MILESTONE 2</h1>
       {value}
+      
       <MadlibHome />
     </div>
   );
