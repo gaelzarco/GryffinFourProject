@@ -1,5 +1,6 @@
-function madLibList() {
-    
+function MadLibList() {
+    console.log('MadLibList rendered')
+
     return(
         <div>
             <ul>
@@ -12,4 +13,4 @@ function madLibList() {
     )
 }
 
-export default madLibList
+export default MadLibList
