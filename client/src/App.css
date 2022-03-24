@@ -3,19 +3,38 @@
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 1em;
+  margin: auto;
 }
 
-.divCategory { 
+.divCategory {
+  color: white; 
   position: relative;
   padding: 10%;
-  border: 1px solid #000;
+  border: 2px solid white;
 }
 
 
-#div1, #div2, #div3, #div4, #div5, #div6 {
-  background: green;
+#div1 {
+  background: orange;
+}
+
+#div2 {
+  background: red;
+}
+
+#div3 {
+  background: purple;
+}
+
+#div4 {
+  background: darkcyan;
+}
+
+#div5 {
+  background: goldenrod;
+}
+
+#div6 {
+  background: orangered;
 }
