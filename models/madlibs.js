@@ -15,7 +15,13 @@ const madlibSchema = new Schema({
     genre: {
         type: Schema.Types.ObjectId,
         ref: 'Genre'
-    }
+    },
+    story: {
+        type: String,
+        required: true,
+
+    },
+    
 })
 
 const Madlib = mongoose.model('Madlib', madlibSchema)

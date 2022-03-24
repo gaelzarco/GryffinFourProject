@@ -6,7 +6,7 @@ const genreSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Scary', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Referece', 'Song Reference', 'Other' ]
+        enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Referece', 'Song Reference', 'Other' ]
     },
     
 }, {toJSON: { virtuals: true }})
