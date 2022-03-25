@@ -12,5 +12,10 @@ madlibs.get('/', (req, res) => {
     })
 })
 
+//Category View
+madlibs.get('/', (req, res) => {
+   
+})
+
 module.exports = madlibs
 

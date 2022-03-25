@@ -13,9 +13,8 @@ const app = express()
 // })
 
 
-
 //Routes
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         message: 'GryffinFOUR BACKEND IS SUCCESSFULLY CONNECTED',
     })
@@ -24,6 +23,13 @@ app.get('/api', (req, res) => {
 //Madlibs Controller
 const madlibsController = require('./controllers/madlib_controllers')
 app.use('/madlibs', madlibsController)
+
+app.get('*', (req, res) => {
+    res.status(404).json({
+        message: '404'
+    })
+})
+
 
 
 // Port to listen on
