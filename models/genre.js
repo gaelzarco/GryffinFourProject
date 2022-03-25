@@ -6,7 +6,7 @@ const genreSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Referece', 'Song Reference', 'Other' ]
+        enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Reference', 'Song Reference', 'Other' ]
     },
     madlibs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Madlib'}]
     
