@@ -53,7 +53,6 @@ function MadlibHome() {
     return(
         
         <div>
-
 {/*Jo's test*/}
 
 =======
@@ -92,6 +91,7 @@ function MadlibHome() {
   <div class="category">Example</div>
   <div class="category">Example</div>
  </div>
+ 
             <footer>
                 <h3>Created by</h3>
                 <div>
