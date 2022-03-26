@@ -2,7 +2,7 @@ const db = require('../models')
 
 //to use await, we need an async function
 db.Genre.create({
-    name: 'Movie Reference'
+    name: 'Song Reference'
 })
 .then(() => {
     console.log('Success')

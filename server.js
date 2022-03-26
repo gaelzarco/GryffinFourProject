@@ -7,11 +7,6 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 
-//MiddleWare
-// mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
-//     console.log("Data sittin' at" , process.env.MONGO_URI)
-// })
-
 
 //Routes
 app.get('/', (req, res) => {
