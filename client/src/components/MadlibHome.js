@@ -2,18 +2,32 @@ import MadLibList from "./MadLibList"
 import { useState, useEffect } from "react"
 
 function MadlibHome() {
-    const [ data, setData ] = useState(null)
+    const [ data, setData ] = useState('')
     const [ view, setView ] = useState(false)
     const [ category, setCategory ] = useState('')
 
     useEffect(() => {
         fetch('/madlibs')
-            .then((res) => setData(res))
-            
+            .then((res) => res.json())
+            .then((data) => setData(data))
             console.log(data)
     }, [])
 
+    const renderList = () => {
+        console.log(data.name)
+
+        if (data){
+            return(
+                <>
+                {console.log(data.name)}
+                <div className={data.name}>{data.name}</div>
+                </>
+            )
+        }
+    }
+
     const renderMadList = (e) => {
+        e.preventDefault()
         setView(view => !view)
 
         if (view === true) {
@@ -31,14 +45,11 @@ function MadlibHome() {
         }
     }
 
-    // const display = () => {
-    //     const genres = data.read()
-
-    //     genres.map(())
-    // }
-
     return(
+
+
         <div>
+            {renderList()}
             <MadLibList category={category} />
             <div className="wrapper">
                 <div className="category horror" onClick={(e) => renderMadList(e)}>Horror
