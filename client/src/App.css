@@ -1,40 +1,42 @@
 .App {
   text-align: center;
 }
-
+ 
 html, body {
   padding: 1em;
   margin: auto;
 }
-
-.divCategory {
-  color: white; 
-  position: relative;
-  padding: 10%;
-  border: 2px solid white;
+ 
+/*Testing*/
+ 
+ 
+.wrapper {
+  padding: 50px 50px 100px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
 }
-
-
-#div1 {
-  background: orange;
+.category {
+  background-color: #444;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:white;
+  text-shadow: 3px 2px 5px black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  transition: transform 0.2s;
+  font-family: "Courier New";
 }
-
-#div2 {
-  background: red;
+ 
+.category:hover {
+  transform: scale(1.2);
 }
-
-#div3 {
-  background: purple;
-}
-
-#div4 {
-  background: darkcyan;
-}
-
-#div5 {
-  background: goldenrod;
-}
-
-#div6 {
-  background: orangered;
+ 
+.category:active{
+  filter: brightness(1.3);
 }
