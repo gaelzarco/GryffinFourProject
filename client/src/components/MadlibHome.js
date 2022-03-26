@@ -1,5 +1,5 @@
-import MadLibList from "./madliblist";
-import React, { Component }  from 'react';
+import MadLibList from "./madliblist"
+
 
 function MadlibHome() {
     const renderMadList = () => {
@@ -10,12 +10,12 @@ function MadlibHome() {
             </>
         )
     }
- 
+
     return(
- 
+        
         <div>
 {/*Jo's test*/}
- 
+
  <div class="wrapper">
   <div class="category horror">Horror</div>
   <div class="category scifi">Sci-fi</div>
@@ -48,5 +48,5 @@ function MadlibHome() {
         </div>
     )
 }
- 
+
 export default MadlibHome

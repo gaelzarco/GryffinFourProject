@@ -1,15 +1,55 @@
 .App {
   text-align: center;
 }
- 
+
 html, body {
   padding: 1em;
   margin: auto;
 }
- 
+
+.divCategory {
+  color: white; 
+  position: relative;
+  padding: 10%;
+  border: 2px solid white;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  }
+
+#div1 {
+  background: orange;
+}
+
+#div2 {
+  background: red;
+}
+
+#div3 {
+  background: purple;
+}
+
+#div4 {
+  background: darkcyan;
+}
+
+#div5 {
+  background: goldenrod;
+}
+
+#div6 {
+  background: orangered;
+}
+
 /*Testing*/
- 
- 
+
+
 .wrapper {
   padding: 50px 50px 100px 100px;
   display: grid;
@@ -32,11 +72,23 @@ html, body {
   transition: transform 0.2s;
   font-family: "Courier New";
 }
- 
+
 .category:hover {
   transform: scale(1.2);
 }
- 
+
 .category:active{
   filter: brightness(1.3);
+}
+
+.horror {
+  background-image: url(/public/images/horror.jpeg);
+}
+
+.scifi {
+  background-image: url(/public/images/scifi.jpg);
+}
+
+.history{
+  background-image: url(/public/images/history.jpg);
 }
