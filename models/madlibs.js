@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const {Schema} = mongoose
+const Genre = require('./genre.js')
 
 //madlib data schema
 const madlibSchema = new Schema({
@@ -16,7 +17,7 @@ const madlibSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Genre'
     },
-    story: {
+    content: {
         type: String,
         required: true,
 

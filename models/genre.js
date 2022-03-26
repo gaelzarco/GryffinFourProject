@@ -6,18 +6,19 @@ const genreSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Referece', 'Song Reference', 'Other' ]
+        enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Reference', 'Song Reference', 'Other' ]
     },
+    madlibs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Madlib'}]
     
 }, {toJSON: { virtuals: true }})
 
-//Virtuals aka child association
-genreSchema.virtual('madlibs', {
-    ref: 'Madlib',
-    localField: '_id',
-    foreignfield: 'genre'
+//Virtuals: this is information that shows madlib is a related property of the genre table but will not be explicitly recorded in mongodb. I believe this is currently conflicting with the child schema
 
-})
+// genreSchema.virtual('madlibs', {
+//     ref: 'Madlib',
+//     localField: '_id',
+//     foreignField: 'genre'
+// })
 
 //model and Exports
 const Genre = mongoose.model('Genre', genreSchema)

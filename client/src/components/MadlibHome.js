@@ -43,7 +43,7 @@ function MadlibHome() {
                 <p>CJ</p>
                 </div>
                 <div>
-                <p>Chris</p>
+                <p>Bibbs</p>
                 </div>
                 <div>
                 <p>Gael</p>

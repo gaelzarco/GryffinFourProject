@@ -1,21 +1,15 @@
 //Dependencies
 const express = require('express')
-const mongoose = require('mongoose')
+
 
 //Configs and App Initilization
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 
-//MiddleWare
-mongoose.connect(process.env.Mongo_URI, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
-    console.log("Data sittin' at" , process.env.Mongo_URI)
-})
-
-
 
 //Routes
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         message: 'GryffinFOUR BACKEND IS SUCCESSFULLY CONNECTED',
     })
@@ -24,6 +18,13 @@ app.get('/api', (req, res) => {
 //Madlibs Controller
 const madlibsController = require('./controllers/madlib_controllers')
 app.use('/madlibs', madlibsController)
+
+app.get('*', (req, res) => {
+    res.status(404).json({
+        message: '404'
+    })
+})
+
 
 
 // Port to listen on
