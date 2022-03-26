@@ -7,6 +7,7 @@ html, body {
   margin: auto;
 }
 
+
 .divCategory {
   color: white; 
   position: relative;
@@ -51,6 +52,13 @@ html, body {
 
 
 .wrapper {
+
+ ul {
+   list-style-type: none;
+ }
+
+ .wrapper {
+
   padding: 50px 50px 100px 100px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -73,6 +81,7 @@ html, body {
   font-family: "Courier New";
 }
 
+
 .category:hover {
   transform: scale(1.2);
 }
@@ -92,3 +101,24 @@ html, body {
 .history{
   background-image: url(/public/images/history.jpg);
 }
+
+ 
+.category:hover {
+  transform: scale(1.2);
+}
+ 
+.category:active {
+  filter: brightness(1.3);
+}
+ 
+/* .horror {
+  background-image: url(/public/images/horror.jpeg);
+}
+ 
+.scifi {
+  background-image: url(/public/images/scifi.jpg);
+}
+ 
+.history{
+  background-image: url(/public/images/history.jpg); */
+

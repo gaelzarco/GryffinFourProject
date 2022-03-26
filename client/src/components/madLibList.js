@@ -1,14 +1,18 @@
-function MadLibList() {
-    console.log('MadLibList rendered')
+import MadLibs from "./MadLibs"
 
-    return(
+function MadLibList(props) {
+    // console.log('receiving click')
+    // const category = props.data.read()
+
+    // const display = data.map((category, index) => {
+    //     return (
+    //         <MadLibs category={category} key={index} />
+    //     )
+    // })
+
+    return (
         <div>
-            <ul>
-                <li>madLib1</li>
-                <li>madLib2</li>
-                <li>madLib3</li>
-                <li>madlib4</li>
-            </ul>
+            <MadLibs category={props.category} />
         </div>
     )
 }
