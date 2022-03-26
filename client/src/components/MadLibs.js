@@ -1,5 +1,3 @@
-
-
 function MadLibs(props) {
     const display = () => {
         <div>
