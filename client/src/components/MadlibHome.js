@@ -1,4 +1,5 @@
-import MadLibList from "./madliblist"
+import MadLibList from "./madliblist";
+import React, { Component }  from 'react';
 
 function MadlibHome() {
     const renderMadList = () => {
@@ -9,17 +10,26 @@ function MadlibHome() {
             </>
         )
     }
-
+ 
     return(
+ 
         <div>
-            <h2>Pick a category to start!</h2>
-            <div className="divCategory" id="div1" onClick={() =>renderMadList()}>Category 1</div>
-            <div className="divCategory" id="div2">Category 2</div>
-            <div className="divCategory" id="div3">Category 3</div>
-            <div className="divCategory" id="div4">Category 4</div>
-            <div className="divCategory" id="div5">Category 5</div>
-            <div className="divCategory" id="div6">Category 6</div>
-
+{/*Jo's test*/}
+ 
+ <div class="wrapper">
+  <div class="category horror">Horror</div>
+  <div class="category scifi">Sci-fi</div>
+  <div class="category history">History</div>
+  <div class="category">Movies</div>
+  <div class="category">Biography</div>
+  <div class="category">Music</div>
+  <div class="category">Example</div>
+  <div class="category">Example</div>
+  <div class="category">Example</div>
+  <div class="category">Example</div>
+  <div class="category">Example</div>
+  <div class="category">Example</div>
+ </div>
             <footer>
                 <h3>Created by</h3>
                 <div>
@@ -38,5 +48,5 @@ function MadlibHome() {
         </div>
     )
 }
-
+ 
 export default MadlibHome

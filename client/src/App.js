@@ -1,7 +1,8 @@
 import './App.css';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-import MadlibHome from './components/madlibhome';
+import MadlibHome from './components/MadlibHome';
+import React, { Component }  from 'react';
 
 function App() {
   const [value, setValue] = useState('')
