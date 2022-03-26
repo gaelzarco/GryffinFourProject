@@ -1,14 +1,24 @@
 import MadLibList from "./MadLibList"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function MadlibHome() {
-    const [ view, setView ] = useState('false')
+    const [ data, setData ] = useState(null)
+    const [ view, setView ] = useState(false)
+    const [ category, setCategory ] = useState('')
 
+    useEffect(() => {
+        fetch('/madlibs')
+            .then((res) => setData(res))
+            
+            console.log(data)
+    }, [])
 
-    const renderMadList = (category) => {
-        setView(!view)
+    const renderMadList = (e) => {
+        setView(view => !view)
 
-        if (view) {
+        if (view === true) {
+            setCategory(`${e.target.className}`)
+
             return (
             <>
             {console.log('state is true')}
@@ -16,20 +26,29 @@ function MadlibHome() {
             </>
             )
         } else {
-            console.log('state is false')
+            console.log('state if false')
+            setCategory('')
         }
     }
 
+    // const display = () => {
+    //     const genres = data.read()
+
+    //     genres.map(())
+    // }
+
     return(
         <div>
+            <MadLibList category={category} />
             <div className="wrapper">
-                <div className="category horror" onClick={(className) => renderMadList(className)}>Horror</div>
-                <div className="category scifi">Sci-fi</div>
-                <div className="category history">History</div>
-                <div className="category">Movies</div>
-                <div className="category">Biography</div>
-                <div className="category">Music</div>
-                <div className="category">Example</div>
+                <div className="category horror" onClick={(e) => renderMadList(e)}>Horror
+                </div>
+                <div className="category scifi" onClick={(e) => renderMadList(e)}>Sci-fi</div>
+                <div className="category history" onClick={(e) => renderMadList(e)}>History</div>
+                <div className="category movies" onClick={(e) => renderMadList(e)}>Movies</div>
+                <div className="category biography" onClick={(e) => renderMadList(e)}>Biography</div>
+                <div className="category music" onClick={(e) => renderMadList(e)}>Music</div>
+                <div className="category" >Example</div>
                 <div className="category">Example</div>
                 <div className="category">Example</div>
                 <div className="category">Example</div>

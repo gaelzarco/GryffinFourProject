@@ -5,13 +5,14 @@ import MadlibHome from './components/MadlibHome';
 function App() {
   const [value, setValue] = useState('')
 
-  useEffect(() => {
-    fetch('/')
-      .then((res) => res.json())
-      .then((data) => {
-        setValue(data.message)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('/api')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setValue(data.message)
+  //     })
+  // }, [])
+  
 
   return (
     <div className="App">
