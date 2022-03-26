@@ -110,6 +110,11 @@ html, body {
 .category:active {
   filter: brightness(1.3);
 }
+
+/* .renderList {
+  align-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
  
 /* .horror {
   background-image: url(/public/images/horror.jpeg);

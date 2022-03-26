@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import MadlibHome from './components/MadlibHome';
 
 function App() {
-  const [value, setValue] = useState('')
+  // const [value, setValue] = useState('')
 
   // useEffect(() => {
   //   fetch('/api')
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>WELCOME TO MADLIB MADNESS</h1>
-      {value}
+      {/* {value} */}
       <MadlibHome />
       
     </div>
