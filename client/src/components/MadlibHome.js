@@ -1,24 +1,41 @@
 import MadLibList from "./MadLibList"
+import { useState } from "react"
 
 function MadlibHome() {
-    const renderMadList = () => {
-        return (
+    const [ view, setView ] = useState('false')
+
+
+    const renderMadList = (category) => {
+        setView(!view)
+
+        if (view) {
+            return (
             <>
-            {console.log('click went through')}
-            <MadLibList />
+            {console.log('state is true')}
+            <MadLibList category={category}/>
             </>
-        )
+            )
+        } else {
+            console.log('state is false')
+        }
     }
 
     return(
         <div>
-            <h2>Pick a category to start!</h2>
-            <div className="divCategory" id="div1" onClick={() =>renderMadList()}>Category 1</div>
-            <div className="divCategory" id="div2">Category 2</div>
-            <div className="divCategory" id="div3">Category 3</div>
-            <div className="divCategory" id="div4">Category 4</div>
-            <div className="divCategory" id="div5">Category 5</div>
-            <div className="divCategory" id="div6">Category 6</div>
+            <div className="wrapper">
+                <div className="category horror" onClick={(className) => renderMadList(className)}>Horror</div>
+                <div className="category scifi">Sci-fi</div>
+                <div className="category history">History</div>
+                <div className="category">Movies</div>
+                <div className="category">Biography</div>
+                <div className="category">Music</div>
+                <div className="category">Example</div>
+                <div className="category">Example</div>
+                <div className="category">Example</div>
+                <div className="category">Example</div>
+                <div className="category">Example</div>
+                <div className="category">Example</div>
+            </div>
 
             <footer>
                 <h3>Created by</h3>
