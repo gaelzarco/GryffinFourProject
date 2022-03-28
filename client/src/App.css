@@ -7,6 +7,10 @@ html, body {
   margin: auto;
 }
 
+ul {
+  display: inline-flex;
+}
+
 /*Grid Setup*/
 .wrapper {
   padding: 50px 50px 100px 100px;
@@ -14,7 +18,6 @@ html, body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
   background-color: #fff;
-  color: #444;
   justify-content: center;
 }
 
@@ -31,6 +34,7 @@ html, body {
   font-size: 150%;
   transition: transform 0.2s;
   font-family: "Courier New";
+  font-weight: 800;
 }
 
 .category:hover {
@@ -41,7 +45,7 @@ html, body {
   filter: brightness(1.3);
 }
 
-/*Category Backgrounds*/
+/*CATEGORY IMAGES*/
 .horror {
   background-image: url(/public/images/horrorstatic.jpg);
 }
@@ -49,11 +53,79 @@ html, body {
   background-image: url(/public/images/horror.gif);
 }
 
-
 .scifi {
-  background-image: url(/public/images/scifi.jpg);
+  background-image: url(/public/images/scifistatic.jpg);
+}
+.scifi:hover {
+  background-image: url(/public/images/scifi.gif);
 }
 
-.history{
-  background-image: url(/public/images/history.jpg);
+.history {
+  background-image: url(/public/images/historystatic.jpg);
+}
+.history:hover {
+  background-image: url(/public/images/history.gif);
+}
+
+.movies {
+  background-image: url(/public/images/moviesstatic.jpg);
+}
+.movies:hover {
+  background-image: url(/public/images/movies.gif);
+}
+
+.bio {
+  background-image: url(/public/images/biostatic.jpg);
+}
+.bio:hover {
+  background-image: url(/public/images/bio.gif);
+}
+
+.music {
+  background-image: url(/public/images/musicstatic.jpg);
+}
+.music:hover {
+  background-image: url(/public/images/music.gif);
+}
+
+.anime {
+  background-image: url(/public/images/animestatic.jpg);
+}
+.anime:hover {
+  background-image: url(/public/images/anime.gif);
+}
+
+.books {
+  background-image: url(/public/images/booksstatic.jpg);
+}
+.books:hover {
+  background-image: url(/public/images/books.gif);
+}
+
+.tv {
+  background-image: url(/public/images/tvstatic.jpg);
+}
+.tv:hover {
+  background-image: url(/public/images/tv.gif);
+}
+
+.health {
+  background-image: url(/public/images/healthstatic.jpg);
+}
+.health:hover {
+  background-image: url(/public/images/health.gif);
+}
+
+.nature {
+  background-image: url(/public/images/naturestatic.jpg);
+}
+.nature:hover {
+  background-image: url(/public/images/nature.gif);
+}
+
+.gaming {
+  background-image: url(/public/images/gamingstatic.jpg);
+}
+.gaming:hover {
+  background-image: url(/public/images/gaming.gif);
 }
