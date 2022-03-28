@@ -12,7 +12,9 @@ ul {
 }
 
 /*Grid Setup*/
-.wrapper {
+
+ .wrapper {
+
   padding: 50px 50px 100px 100px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -36,6 +38,7 @@ ul {
   font-family: "Courier New";
   font-weight: 800;
 }
+
 
 .category:hover {
   transform: scale(1.2);
@@ -74,10 +77,10 @@ ul {
   background-image: url(/public/images/movies.gif);
 }
 
-.bio {
+.biography {
   background-image: url(/public/images/biostatic.jpg);
 }
-.bio:hover {
+.biography:hover {
   background-image: url(/public/images/bio.gif);
 }
 

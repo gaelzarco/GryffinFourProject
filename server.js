@@ -9,7 +9,7 @@ const app = express()
 
 
 //Routes
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json({
         message: 'GryffinFOUR BACKEND IS SUCCESSFULLY CONNECTED',
     })
