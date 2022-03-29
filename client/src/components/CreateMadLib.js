@@ -24,6 +24,16 @@ function CreateMadLib() {
                     id="content"
                     required
                 />
+                <label htmlFor="genre">Genre</label>
+                <select id="genre" name="genre">
+                    <option value="horror">Horror</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="positive-mental-health">Positive Mental Health</option>
+                    <option value="movie-reference">Movie Reference</option>
+                    <option value="song-reference">Song Reference</option>
+                    <option value="Historical">Historical</option>
+                    <option value="other">Other</option>
+                </select>
                 <input type="submit"/>
             </form>
         </div>

@@ -1,40 +1,33 @@
 import MadLibList from "./MadLibList"
 import { useState } from "react"
 
-
 function MadlibHome(props) {
     const [ view, setView ] = useState(false)
 
     const renderList = () => {
         const data = props.data
-        
-        return data.map((category, index) => {
-            return (
-                <>
-                    <div className='category' key={index} onClick={() => {renderMadList()}}>{category.name}</div>
-                </>
-            )
-        })
-    }
-
-    const renderMadList = () => {
-        setView(view => !view)
 
         if (view === true) {
             return (
             <>
-            {console.log('state is true')}
-            <MadLibList />
+            <MadLibList data={props.data} />
             </>
             )
         }
+        
+        return data.map((category, index) => {
+            return (
+                <>
+                    <div className='category' key={index} onClick={() => {setView(!view)}}>{category.name}</div>
+                </>
+            )
+        })
     }
 
     return(
         <div>
             <div className="wrapper">
                 {renderList()}
-                <MadLibList data={props.data}/>
             </div>
 
             <footer>
