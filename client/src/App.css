@@ -7,59 +7,11 @@ html, body {
   margin: auto;
 }
 
+ul {
+  display: inline-flex;
+}
 
 /*Grid Setup*/
-=======
-
-.divCategory {
-  color: white; 
-  position: relative;
-  padding: 10%;
-  border: 2px solid white;
-}
-
-
-.parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  }
-
-#div1 {
-  background: orange;
-}
-
-#div2 {
-  background: red;
-}
-
-#div3 {
-  background: purple;
-}
-
-#div4 {
-  background: darkcyan;
-}
-
-#div5 {
-  background: goldenrod;
-}
-
-#div6 {
-  background: orangered;
-}
-
-/*Testing*/
-
-
-
-.wrapper {
-
- ul {
-   list-style-type: none;
- }
 
  .wrapper {
 
@@ -68,7 +20,6 @@ html, body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
   background-color: #fff;
-  color: #444;
   justify-content: center;
 }
 
@@ -85,6 +36,7 @@ html, body {
   font-size: 150%;
   transition: transform 0.2s;
   font-family: "Courier New";
+  font-weight: 800;
 }
 
 
@@ -96,7 +48,7 @@ html, body {
   filter: brightness(1.3);
 }
 
-/*Category Backgrounds*/
+/*CATEGORY IMAGES*/
 .horror {
   background-image: url(/public/images/horrorstatic.jpg);
 }
@@ -104,37 +56,79 @@ html, body {
   background-image: url(/public/images/horror.gif);
 }
 
-
 .scifi {
-  background-image: url(/public/images/scifi.jpg);
+  background-image: url(/public/images/scifistatic.jpg);
+}
+.scifi:hover {
+  background-image: url(/public/images/scifi.gif);
 }
 
-.history{
-  background-image: url(/public/images/history.jpg);
+.history {
+  background-image: url(/public/images/historystatic.jpg);
+}
+.history:hover {
+  background-image: url(/public/images/history.gif);
 }
 
- 
-.category:hover {
-  transform: scale(1.2);
+.movies {
+  background-image: url(/public/images/moviesstatic.jpg);
 }
- 
-.category:active {
-  filter: brightness(1.3);
+.movies:hover {
+  background-image: url(/public/images/movies.gif);
 }
 
-/* .renderList {
-  align-content: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} */
- 
-/* .horror {
-  background-image: url(/public/images/horror.jpeg);
+.biography {
+  background-image: url(/public/images/biostatic.jpg);
 }
- 
-.scifi {
-  background-image: url(/public/images/scifi.jpg);
+.biography:hover {
+  background-image: url(/public/images/bio.gif);
 }
- 
-.history{
-  background-image: url(/public/images/history.jpg); */
 
+.music {
+  background-image: url(/public/images/musicstatic.jpg);
+}
+.music:hover {
+  background-image: url(/public/images/music.gif);
+}
+
+.anime {
+  background-image: url(/public/images/animestatic.jpg);
+}
+.anime:hover {
+  background-image: url(/public/images/anime.gif);
+}
+
+.books {
+  background-image: url(/public/images/booksstatic.jpg);
+}
+.books:hover {
+  background-image: url(/public/images/books.gif);
+}
+
+.tv {
+  background-image: url(/public/images/tvstatic.jpg);
+}
+.tv:hover {
+  background-image: url(/public/images/tv.gif);
+}
+
+.health {
+  background-image: url(/public/images/healthstatic.jpg);
+}
+.health:hover {
+  background-image: url(/public/images/health.gif);
+}
+
+.nature {
+  background-image: url(/public/images/naturestatic.jpg);
+}
+.nature:hover {
+  background-image: url(/public/images/nature.gif);
+}
+
+.gaming {
+  background-image: url(/public/images/gamingstatic.jpg);
+}
+.gaming:hover {
+  background-image: url(/public/images/gaming.gif);
+}
