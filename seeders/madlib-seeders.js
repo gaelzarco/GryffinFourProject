@@ -6,8 +6,8 @@ async function seed() {
 
     // create the Madlib Entry
     let madlib = await db.Madlib.create({
-        name: "Something Foreign",
-        author: "SiR",
+        name: "Funny Song Ad-Lib",
+        author: "Funny MAN",
         content: "This is placeholder text to make sure that everything is working as planned for the database"
     })
 
