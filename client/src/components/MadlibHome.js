@@ -53,19 +53,18 @@ function MadlibHome() {
 
             <MadLibList category={category} />
             <div className="wrapper">
-                <div className="category horror" onClick={(e) => renderMadList(e)}>Horror
-                </div>
+                <div className="category horror" onClick={(e) => renderMadList(e)}>Horror</div>
                 <div className="category scifi" onClick={(e) => renderMadList(e)}>Sci-fi</div>
                 <div className="category history" onClick={(e) => renderMadList(e)}>History</div>
                 <div className="category movies" onClick={(e) => renderMadList(e)}>Movies</div>
                 <div className="category biography" onClick={(e) => renderMadList(e)}>Biography</div>
                 <div className="category music" onClick={(e) => renderMadList(e)}>Music</div>
-                <div class="category anime">Anime</div>
-                <div class="category books">Books</div>
-                <div class="category tv">TV</div>
-                <div class="category health">Health</div>
-                <div class="category nature">Nature</div>
-                <div class="category gaming">Gaming</div>
+                <div className="category anime" onClick={(e) => renderMadList(e)}>Anime</div>
+                <div className="category books" onClick={(e) => renderMadList(e)}>Books</div>
+                <div className="category tv" onClick={(e) => renderMadList(e)}>TV</div>
+                <div className="category health" onClick={(e) => renderMadList(e)}>Health</div>
+                <div className="category nature" onClick={(e) => renderMadList(e)}>Nature</div>
+                <div className="category gaming" onClick={(e) => renderMadList(e)}>Gaming</div>
             </div>
 
             <footer>
