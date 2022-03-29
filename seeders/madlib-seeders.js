@@ -6,9 +6,7 @@ async function seed() {
         name: "Something Foreign",
         author: "SiR",
         genre: "Horror",
-        content: "This is placeholder text to make sure that everything is working as planned for the database"
     })
-
     //add MAdlib to the category
     db.Madlib.push(madlib.id)
 

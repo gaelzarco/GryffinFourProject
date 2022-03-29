@@ -8,7 +8,7 @@ const db = require('../models')
 madlibs.get('/', (req, res) => {
     db.Genre.find()
     .then(pulledGenre => {
-        res.status(200).json(pulledGenre)
+        res.status(200).send(pulledGenre)
     })
     .catch(err => {
         console.log(err)

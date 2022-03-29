@@ -26,31 +26,8 @@ html, body {
   grid-row-gap: 10px;
   }
 
-#div1 {
-  background: orange;
-}
-
-#div2 {
-  background: red;
-}
-
-#div3 {
-  background: purple;
-}
-
-#div4 {
-  background: darkcyan;
-}
-
-#div5 {
-  background: goldenrod;
-}
-
-#div6 {
-  background: orangered;
-}
-
 /*Testing*/
+
  ul {
    list-style-type: none;
  }
@@ -59,6 +36,7 @@ ul {
 }
 
 /*Grid Setup*/
+
 
  .wrapper {
 
