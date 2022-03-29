@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react'
-import MadlibHome from './components/madlibhome';
+import MadlibHome from './components/MadlibHome';
 
 function App() {
   // const [value, setValue] = useState('')

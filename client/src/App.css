@@ -9,7 +9,6 @@ html, body {
 
 
 /*Grid Setup*/
-=======
 
 .divCategory {
   color: white; 
@@ -52,11 +51,6 @@ html, body {
 }
 
 /*Testing*/
-
-
-
-.wrapper {
-
  ul {
    list-style-type: none;
  }

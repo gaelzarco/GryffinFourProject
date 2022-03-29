@@ -48,14 +48,6 @@ function MadlibHome() {
 
     return(
 
-
-
-    return(
-        
-        <div>
-{/*Jo's test*/}
-
-=======
         <div>
             {renderList()}
 
