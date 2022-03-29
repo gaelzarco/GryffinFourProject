@@ -1,3 +1,4 @@
+
 import MadLibList from "./MadLibList"
 import { useState } from "react"
 
@@ -25,25 +26,20 @@ function MadlibHome(props) {
     }
 
     return(
+
         <div>
             <div className="wrapper">
                 {renderList()}
             </div>
 
             <footer>
-                <h3>Created by</h3>
-                <div>
-                <p>CJ</p>
-                </div>
-                <div>
-                <p>Bibbs</p>
-                </div>
-                <div>
-                <p>Gael</p>
-                </div>
-                <div>
-                <p>Jo</p>
-                </div>
+                <ul>
+                    <li><h4>Created by:</h4></li>
+                    <li>CJ</li>
+                    <li>Bibbs</li>
+                    <li>Gael</li>
+                    <li>Jo</li>
+                </ul>
             </footer>
         </div>
     )

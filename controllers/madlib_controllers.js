@@ -1,13 +1,12 @@
 const express = require('express')
 const madlibs = express.Router()
 const db = require('../models')
-const Madlib = require('../models/madlibs')
-const Genre = require('../models/genre')
+
 
  
 //Home page that displays the Genres
 madlibs.get('/', (req, res) => {
-    Genre.find()
+    db.Genre.find()
     .then(pulledGenre => {
         res.status(200).send(pulledGenre)
     })
@@ -17,9 +16,20 @@ madlibs.get('/', (req, res) => {
     })
 })
 
+//Selected Madlib to read
+madlibs.get('/madlib/:madlibId',  (req, res) => {
+    db.Madlibs.findById(req.params.madlibId)
+    .then( madlib => {
+        console.log(madlib)
+        res.status(200).json(madlib)
+    })
+    .catch(err )
+
+})
+
 //Selected Genre and all of its Madlibs
-madlibs.get('/:id', (req, res) => {
-    Genre.findById(req.params.id)
+madlibs.get('/:genreId', (req, res) => {
+    db.Genre.findById(req.params.genreId)
     .populate('madlibs', 'name author')
     .then(pulledGenre => {
         res.status(200).json(pulledGenre)
@@ -30,15 +40,23 @@ madlibs.get('/:id', (req, res) => {
     })
 })
 
-//This Route does not work just yet
-// //Selected Madlib to read
-// madlibs.get('./:id/:madlibId', (req, res) => {
-//     Madlib.findById(req.params.id)
-//     .then(selectedMadlib => {
-//         res.status(200).json(selectedMadlib)
-//     })
+madlibs.post("/", (req, res) => {
+    console.log(res.body)
+    db.Madlib.create(req.body)
+    .then(() =>{
+        res.json({
+            message: 'Upload Successful!'
+        })
+    })
+     .catch(err => {
+         console.log(err)
+         res.json({
+             message: '404'
+         })
+     })   
+})
 
-// })
+
 
 
 
