@@ -7,23 +7,30 @@ const db = require('../models')
 //Home page that displays the Genres
 madlibs.get('/', (req, res) => {
     db.Genre.find()
-    .then(pulledGenre => {
-        res.status(200).send(pulledGenre)
+    .then(genre => {
+        res.status(200).json(genre)
     })
     .catch(err => {
-        console.log(err)
-        res.send('404')
+        console.log('this is what the problem could be', err)
+        res.json ({
+            message: '404'
+        })
     })
 })
 
 //Selected Madlib to read
 madlibs.get('/madlib/:madlibId',  (req, res) => {
-    db.Madlibs.findById(req.params.madlibId)
+    db.Madlib.findById(req.params.madlibId)
     .then( madlib => {
         console.log(madlib)
         res.status(200).json(madlib)
     })
-    .catch(err )
+    .catch(err => {
+        console.log('This is what the problem could be', err)
+        res.json({
+            message: '404'
+        })
+    })
 
 })
 
@@ -36,10 +43,14 @@ madlibs.get('/:genreId', (req, res) => {
     })
     .catch(err => {
         console.log(err)
-        res.send('404')
+        res.json({
+            message: '404'
+        })
     })
 })
 
+
+//New madlib Submission form
 madlibs.post("/", (res, req) => {
     db.Madlib.create(req.body)
     .then(() =>{
@@ -47,12 +58,30 @@ madlibs.post("/", (res, req) => {
             message: 'Upload Successful!'
         })
     })
-     .catch(err => {
-         console.log(err)
+    .catch(err => {
+         console.log('This is what the problem could be', err)
          res.json({
              message: '404'
          })
      })   
+})
+
+
+//Delete a Madlib
+madlibs.delete('/madlib/:madlibId', (req, res) => {
+    db.Madlib.findByIdAndDelete(req.params.madlibId)
+    .then(deletedMadlib => {
+        console.log(deletedMadlib)
+        res.json({
+            message: "Successfully Deleted"
+        })
+    })
+    .catch(err => {
+        console.log('This is what the problem might be', err)
+        res.json({
+            message: 'A Problem has occured'
+        })
+    })
 })
 
 
