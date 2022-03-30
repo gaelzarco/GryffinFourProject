@@ -1,5 +1,5 @@
 
-import MadLibList from "./MadLibList"
+import MadLibList from "./madLibList"
 import { useState } from "react"
 
 
@@ -54,7 +54,7 @@ function MadlibHome(props) {
 
             </div>
 
-          <footer>
+            <footer>
                 <ul>
                     <li>Created By:</li>
                     <li>Bibbs</li>
@@ -63,6 +63,7 @@ function MadlibHome(props) {
                     <li>Jo</li>
                 </ul>
           </footer>
+          
         </div>
     )
 }

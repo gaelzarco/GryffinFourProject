@@ -29,8 +29,8 @@ const renderMadLibHome = () => {
   return (
     <div className="App">
       <h1 className="title">WELCOME TO MADLIB MADNESS</h1>
-      {/* {value} */}
-      <MadlibHome />
+      {renderMadLibHome()}
+      <CreateMadLib />
     </div>
   );
 }
