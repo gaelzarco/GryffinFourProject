@@ -6,7 +6,7 @@ const express = require('express')
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
-
+app.use(express.urlencoded({extended: true}))
 
 //Routes
 app.get('/api', (req, res) => {

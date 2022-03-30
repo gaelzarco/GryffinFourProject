@@ -50,8 +50,13 @@ madlibs.get('/:genreId', (req, res) => {
 })
 
 
+
 //New madlib Submission form
 madlibs.post("/", (res, req) => {
+
+madlibs.post("/", (req, res) => {
+    console.log(res.body)
+
     db.Madlib.create(req.body)
     .then(() =>{
         res.json({

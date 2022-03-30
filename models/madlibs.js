@@ -5,12 +5,12 @@ const Genre = require('./genre.js')
 //madlib data schema
 const madlibSchema = new Schema({
     name: {
-        type: String,
-        required: true,
+        type: String
+        // required: true,
     },
     author: {
         type: String, 
-        required: true,
+        // required: true,
         default: 'Anonymous'
     },
     genre: {
@@ -18,8 +18,8 @@ const madlibSchema = new Schema({
         ref: 'Genre'
     },
     content: {
-        type: String,
-        required: true,
+        type: String
+        // required: true,
 
     },
     

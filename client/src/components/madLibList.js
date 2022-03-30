@@ -1,5 +1,3 @@
-import MadLibs from "./MadLibs"
-
 function MadLibList(props) {
 
     const display = () => {
@@ -7,7 +5,10 @@ function MadLibList(props) {
 
         return data.map((category, index) => {
             return (
-                <li key={index} >{category.madlibs}</li>
+                <div>
+                    <h2>{category.name}</h2>
+                    <h3 key={index} >{category.madlibs}</h3>
+                </div>
             )
         })
     }

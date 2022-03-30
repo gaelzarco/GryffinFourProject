@@ -1,61 +1,56 @@
 
+
 import MadLibList from "./madLibList"
+
+// import MadLibList from "./MadLibList" 
+
 import { useState } from "react"
-
-
 
 function MadlibHome(props) {
     const [ view, setView ] = useState(false)
+    const data = props.data
 
-    const renderList = () => {
-        const data = props.data
-        
+    const renderCatList = () => {
         return data.map((category, index) => {
             return (
                 <>
-                    <div className='category' key={index} onClick={() => {renderMadList()}}>{category.name}</div>
+                    <div className='category' id={category.name} key={index} onClick={() => {setView(!view)}}>
+                        {category.name}
+                    </div>
                 </>
             )
         })
     }
 
     const renderMadList = () => {
-        setView(view => !view)
-
         if (view === true) {
             return (
-            <>
-            {console.log('state is true')}
-            <MadLibList />
-            </>
+                data.map((category) => {
+                    return (
+                        category.madlibs.map((madlib, index) => {
+                            return (
+                                <>
+                                    <h2>{category.name}</h2>
+                                    <li key={index}>{madlib}</li>
+                                </>
+                            )
+                        })
+                    )
+                })
             )
         }
     }
 
     return(
-
         <div>
+            {renderMadList()}
             <div className="wrapper">
-
-                <div className="category horror" onClick={(e) => renderMadList(e)}>Horror</div>
-                <div className="category scifi" onClick={(e) => renderMadList(e)}>Sci-fi</div>
-                <div className="category history" onClick={(e) => renderMadList(e)}>History</div>
-                <div className="category movies" onClick={(e) => renderMadList(e)}>Movies</div>
-                <div className="category biography" onClick={(e) => renderMadList(e)}>Biography</div>
-                <div className="category music" onClick={(e) => renderMadList(e)}>Music</div>
-                <div className="category anime" onClick={(e) => renderMadList(e)}>Anime</div>
-                <div className="category books" onClick={(e) => renderMadList(e)}>Books</div>
-                <div className="category tv" onClick={(e) => renderMadList(e)}>TV</div>
-                <div className="category health" onClick={(e) => renderMadList(e)}>Health</div>
-                <div className="category nature" onClick={(e) => renderMadList(e)}>Nature</div>
-
-                {renderList()}
-                <MadLibList data={props.data}/>
-
+                {renderCatList()}
             </div>
 
             <footer>
                 <ul>
+
                     <li>Created By:</li>
                     <li>Bibbs</li>
                     <li>Gael</li>
@@ -64,6 +59,14 @@ function MadlibHome(props) {
                 </ul>
           </footer>
           
+                    <li><h4>Created by:</h4></li>
+                    <li>CJ</li>
+                    <li>Bibbs</li>
+                    <li>Gael</li>
+                    <li>Jo</li>
+                </ul>
+            </footer>
+
         </div>
     )
 }
