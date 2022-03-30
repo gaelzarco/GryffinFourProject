@@ -27,3 +27,4 @@ const madlibSchema = new Schema({
 
 const Madlib = mongoose.model('Madlib', madlibSchema)
 module.exports = Madlib
+

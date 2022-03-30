@@ -2,8 +2,6 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-/*needs an adjustment, doesnt go to bottom?*/
 footer {
   position: fixed;
   bottom: 0;
