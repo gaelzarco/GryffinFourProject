@@ -1,7 +1,8 @@
 function CreateMadLib() {
     return (
         <div>
-            <h2>Create a New Madlib</h2>
+            <div className="form">
+            <h2>Create a New Madlib (Temp Form)</h2>
             <form action="/madlidbs" method="POST">
                 <label htmlFor="name">Name</label>
                 <input
@@ -27,6 +28,7 @@ function CreateMadLib() {
                 <input type="submit"/>
             </form>
         </div>
+    </div>
     )
 }
 

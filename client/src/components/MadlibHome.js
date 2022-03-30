@@ -1,5 +1,5 @@
 
-import MadLibList from "./MadLibList"
+import MadLibList from "./madLibList"
 import { useState } from "react"
 
 
@@ -55,14 +55,15 @@ function MadlibHome(props) {
             </div>
 
             <footer>
-                <ui>
-                    <ul><h4>Created by:</h4></ul>
-                    <ul>CJ</ul>
-                    <ul>Bibbs</ul>
-                    <ul>Gael</ul>
-                    <ul>Jo</ul>
-                </ui>
-            </footer>
+                <ul>
+                    <li>Created By:</li>
+                    <li>Bibbs</li>
+                    <li>Gael</li>
+                    <li>CJ</li>
+                    <li>Jo</li>
+                </ul>
+          </footer>
+          
         </div>
     )
 }
