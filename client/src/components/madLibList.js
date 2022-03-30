@@ -1,5 +1,3 @@
-import MadLibs from "./MadLibs"
-
 function MadLibList(props) {
 
     const display = () => {
