@@ -1,54 +1,81 @@
-.App {
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/*needs an adjustment, doesnt go to bottom?*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
   text-align: center;
 }
 
-html, body {
-  padding: 1em;
-  margin: auto;
-}
-
 ul {
-  display: inline-flex;
+  color: white;
+  background-color: #363236;
+  }
+
+li {
+    display: inline-flex;
+    padding: 10px;
+    color: white;
 }
 
-/*Grid Setup*/
+.App {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #1f1c1f;
+    font-family: "Courier New";
+}
 
- .wrapper {
+.title{
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 45px;
+  letter-spacing: -0.8px;
+  word-spacing: 0px;
+  font-variant: small-caps;
+  }
 
-  padding: 50px 50px 100px 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
-  background-color: #fff;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 55px;
 }
 
-/*Category Styles*/
 .category {
-  background-color: #444;
+  flex: 0 0 auto;
+  margin: 10px;
+  text-align: center;
+  font-weight: 800;
+  height: 70px;
+  width: 320px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color:white;
   text-shadow: 3px 2px 5px black;
   border-radius: 5px;
-  padding: 20px;
+  padding: 13px;
   font-size: 150%;
   transition: transform 0.2s;
-  font-family: "Courier New";
-  font-weight: 800;
 }
-
 
 .category:hover {
   transform: scale(1.2);
+  box-shadow: 0px 0px 7px 0px rgba(255,255,255,0.67);
 }
 
-.category:active{
-  filter: brightness(1.3);
-}
-
-/*CATEGORY IMAGES*/
 .horror {
   background-image: url(/public/images/horrorstatic.jpg);
 }
