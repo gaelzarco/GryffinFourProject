@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -31,7 +32,7 @@ li {
 .title{
   text-align: center;
   color: white;
-  padding-top: 50px;
+  padding-top: 20px;
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 45px;
   letter-spacing: -0.8px;
@@ -39,6 +40,7 @@ li {
   font-variant: small-caps;
   }
 
+  /*Tabs and Flexbox*/
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +50,7 @@ li {
   align-content: center;
   padding-left: 150px;
   padding-right: 150px;
-  padding-top: 55px;
+  padding-top: 40px;
 }
 
 .category {
@@ -156,4 +158,17 @@ li {
 }
 .gaming:hover {
   background-image: url(/public/images/gaming.gif);
+}
+
+/*Form Adjustments*/
+
+/*temporary Setup just so form is visible*/
+
+.form {
+  display: inline-flex;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
