@@ -13,8 +13,6 @@ function App() {
         .then((data) => setData(data))
 }, [data.name])
 
-console.log(data)
-
 const renderMadLibHome = () => {
   if (data) {
     return (
@@ -30,7 +28,7 @@ const renderMadLibHome = () => {
     <div className="App">
       <h1 className="title">WELCOME TO MADLIB MADNESS</h1>
       {renderMadLibHome()}
-      <MadLib target={'62451de4e9b7eca7c160a213'}/>
+      <MadLib target={'624523179c41c345d6ebc2e9'}/>
     </div>
   );
 }
