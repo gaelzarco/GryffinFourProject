@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react'
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
+import MadLib from './components/MadLib';
 
 function App() {
   const [ data, setData ] = useState('')
@@ -29,6 +30,7 @@ const renderMadLibHome = () => {
     <div className="App">
       <h1 className="title">WELCOME TO MADLIB MADNESS</h1>
       {renderMadLibHome()}
+      <MadLib target={'62451de4e9b7eca7c160a213'}/>
     </div>
   );
 }

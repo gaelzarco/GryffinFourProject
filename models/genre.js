@@ -9,7 +9,10 @@ const genreSchema = new Schema({
         required: true,
         enum: ['Horror', 'Fantasy', 'Positive Mental Health', 'Historical', 'Movie Reference', 'Song Reference', 'Other' ]
     },
-    //madlibs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Madlib'}]
+    img: {
+        type: String
+    },
+    // madlibs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Madlib'}]
     
 }, {toJSON: { virtuals: true }})
 

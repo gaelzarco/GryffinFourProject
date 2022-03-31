@@ -7,28 +7,29 @@ const db = require('../models')
 //Home page that displays the Genres
 madlibs.get('/', (req, res) => {
     db.Genre.find()
+    .populate('madlibs', 'name')
     .then(genre => {
         res.status(200).json(genre)
     })
     .catch(err => {
         console.log('this is what the problem could be', err)
         res.json ({
-            message: '404'
+            message: 'home page 404'
         })
     })
 })
 
 //Selected Madlib to read
-madlibs.get('/madlib/:madlibId',  (req, res) => {
+madlibs.get('/:madlibId', (req, res) => {
     db.Madlib.findById(req.params.madlibId)
-    .then( madlib => {
+    .then(madlib => {
         console.log(madlib)
         res.status(200).json(madlib)
     })
     .catch(err => {
         console.log('This is what the problem could be', err)
         res.json({
-            message: '404'
+            message: 'madlib read route'
         })
     })
 
@@ -44,18 +45,14 @@ madlibs.get('/:genreId', (req, res) => {
     .catch(err => {
         console.log(err)
         res.json({
-            message: '404'
+            message: 'genre id route'
         })
     })
 })
 
-
-
 //New madlib Submission form
-madlibs.post("/", (res, req) => {
-
 madlibs.post("/", (req, res) => {
-    console.log(res.body)
+    console.log(req.body)
 
     db.Madlib.create(req.body)
     .then(() =>{
@@ -66,7 +63,7 @@ madlibs.post("/", (req, res) => {
     .catch(err => {
          console.log('This is what the problem could be', err)
          res.json({
-             message: '404'
+             message: 'post route'
          })
      })   
 })
@@ -89,9 +86,4 @@ madlibs.delete('/madlib/:madlibId', (req, res) => {
     })
 })
 
-
-
-
-
 module.exports = madlibs
-

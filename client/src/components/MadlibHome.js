@@ -1,20 +1,15 @@
-
-
-import MadLibList from "./madLibList"
-
-// import MadLibList from "./MadLibList" 
-
 import { useState } from "react"
+import MadLib from "./MadLib"
 
 function MadlibHome(props) {
-    const [ view, setView ] = useState(false)
+    const [ view, setView ] = useState([])
     const data = props.data
 
     const renderCatList = () => {
         return data.map((category, index) => {
             return (
                 <>
-                    <div className='category' id={category.name} key={index} onClick={() => {setView(!view)}}>
+                    <div className='category' id={category.name} key={index} onClick={(e) => {renderMadList(e.target.id)}} style={{backgroundImage: `url(${category.img})`}}>
                         {category.name}
                     </div>
                 </>
@@ -22,35 +17,41 @@ function MadlibHome(props) {
         })
     }
 
-    const renderMadList = () => {
-        if (view === true) {
-            return (
-                data.map((category) => {
-                    return (
-                        category.madlibs.map((madlib, index) => {
-                            return (
-                                <>
-                                    <h2>{category.name}</h2>
-                                    <li key={index}>{madlib}</li>
-                                </>
-                            )
-                        })
-                    )
-                })
+    const renderMadList = (target) => {
+        let result = data.filter((category) => {
+            if (category.name === target) {
+                return category
+            }
+        })
+
+        return (
+            result.map((category) => {
+                    setView(category.madlibs)
+                }
             )
-        }
+        )
+    }
+
+    const renderMadLib = (e) => {
+        let target = e.target.id
+
+        return (
+            <MadLib target={target} />
+        )
     }
 
     return(
         <div>
-            {renderMadList()}
+            {view.map((madlib, index) => {
+                console.log(madlib._id)
+                return <li><a key={index} href={madlib._id} id={madlib._id} onClick={(e) => {renderMadLib(e)}}>{madlib.name}</a></li>
+            })}
             <div className="wrapper">
                 {renderCatList()}
             </div>
 
             <footer>
                 <ul>
-
                     <li>Created By:</li>
                     <li>Bibbs</li>
                     <li>Gael</li>
@@ -58,15 +59,6 @@ function MadlibHome(props) {
                     <li>Jo</li>
                 </ul>
           </footer>
-          
-                    <li><h4>Created by:</h4></li>
-                    <li>CJ</li>
-                    <li>Bibbs</li>
-                    <li>Gael</li>
-                    <li>Jo</li>
-                </ul>
-            </footer>
-
         </div>
     )
 }

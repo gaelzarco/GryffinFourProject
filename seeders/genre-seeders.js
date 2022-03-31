@@ -3,7 +3,8 @@ const db = require('../models')
 //to use await, we need an async function
 db.Genre.create({
 
-    name: 'Fantasy'
+    name: 'Other',
+    img: 'https://keydifferences.com/wp-content/uploads/2018/10/other-vs-another.jpg'
 
 })
 .then(() => {
