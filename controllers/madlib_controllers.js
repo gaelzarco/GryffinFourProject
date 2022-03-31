@@ -23,7 +23,6 @@ madlibs.get('/', (req, res) => {
 madlibs.get('/:madlibId', (req, res) => {
     db.Madlib.findById(req.params.madlibId)
     .then(madlib => {
-        console.log(madlib)
         res.status(200).json(madlib)
     })
     .catch(err => {
