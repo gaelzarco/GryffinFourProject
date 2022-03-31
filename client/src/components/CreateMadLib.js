@@ -14,9 +14,6 @@ function CreateMadLib(props) {
         <div>
 
             <div className="form">
-            <h2>Create a New Madlib (Temp Form)</h2>
-            <form action="/madlidbs" method="POST">
-
             <h2>Create a New Madlib</h2>
             <form action="/madlibs" method="POST">
 
@@ -44,13 +41,6 @@ function CreateMadLib(props) {
                 <label htmlFor="genre">Genre</label>
                 <select id="genre" name="genre">
                     {renderOptions()}
-                    {/* <option value="horror">Horror</option>
-                    <option value="fantasy">Fantasy</option>
-                    <option value="positive-mental-health">Positive Mental Health</option>
-                    <option value="movie-reference">Movie Reference</option>
-                    <option value="song-reference">Song Reference</option>
-                    <option value="Historical">Historical</option>
-                    <option value="other">Other</option> */}
                 </select>
                 <input type="submit"/>
             </form>

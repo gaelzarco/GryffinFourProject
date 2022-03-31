@@ -21,7 +21,7 @@ app.use('/madlibs', madlibsController)
 
 app.get('*', (req, res) => {
     res.status(404).json({
-        message: '404'
+        message: 'server js route'
     })
 })
 
