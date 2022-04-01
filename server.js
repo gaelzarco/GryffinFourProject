@@ -8,7 +8,10 @@ const PORT = process.env.PORT
 const app = express()
 app.use(express.urlencoded({extended: true}))
 
-//Routes
+
+app.use(express.static(path.resolve(__dirname, '../client/build')))
+
+//Routes start
 app.get('/api', (req, res) => {
     res.json({
         message: 'GryffinFOUR BACKEND IS SUCCESSFULLY CONNECTED',
@@ -20,9 +23,7 @@ const madlibsController = require('./controllers/madlib_controllers')
 app.use('/madlibs', madlibsController)
 
 app.get('*', (req, res) => {
-    res.status(404).json({
-        message: 'server js route'
-    })
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
 })
 
 
