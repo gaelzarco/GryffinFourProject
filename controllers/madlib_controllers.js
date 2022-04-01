@@ -37,7 +37,7 @@ madlibs.get('/:madlibId', (req, res) => {
 //Selected Genre and all of its Madlibs
 madlibs.get('/:genreId', (req, res) => {
     db.Genre.findById(req.params.genreId)
-    .populate('madlibs', 'name author')
+    .populate('madlibs')
     .then(pulledGenre => {
         res.status(200).json(pulledGenre)
     })

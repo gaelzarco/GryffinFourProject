@@ -4,17 +4,20 @@ import MadLib from "./MadLib"
 function MadlibHome(props) {
     const [ listView, setListView ] = useState([])
     const data = props.data
+    console.log(props.data)
+    
 
-    const renderCatList = () => {
-        return data.map((category, index) => {
-            return (
-                <>
-                    <div className='category' id={category.name} key={index} onClick={(e) => {renderMadList(e.target.id)}} style={{backgroundImage: `url(${category.img})`}}>
-                        {category.name}
-                    </div>
-                </>
-            )
-        })
+    const renderCatList = (data) => {
+        
+        // return data.map((category, index) => {
+        //     return (
+        //         <>
+        //             <div className='category' id={category.name} key={index} onClick={(e) => {renderMadList(e.target.id)}} style={{backgroundImage: `url(${category.img})`}}>
+        //                 {category.name}
+        //             </div>
+        //         </>
+        //     )
+        // })
     }
 
     const renderMadList = (target) => {
