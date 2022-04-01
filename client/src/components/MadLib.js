@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react"
 
 function MadLib(props) {
-    const [ madlib, setMadlib ] = useState(null)
+    const [ madlib, setMadlib ] = useState('')
     const target = props.target
 
     useEffect(() => {
         fetch(`/madlibs/${target}`)
-            .then((res) => res.json())
-            .then((madlib) => setMadlib(madlib))
-    }, [target.name])
+            .then((res) => console.log(res.json()))
+            // .then((madlib) => setMadlib(madlib))
+            .catch((err) => {
+                console.log(`there seems to be an err ${err}`)
+            })
+    }, [target])
 
 
     const displayMadLib = () => {
         if (madlib) {
-            console.log(madlib)
-            console.log(madlib.name)
+            // console.log(madlib)
+            // console.log(madlib.name)
             return(
             <>
                 <h2>{madlib.name}</h2>

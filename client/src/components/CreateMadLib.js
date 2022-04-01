@@ -1,27 +1,35 @@
 function CreateMadLib(props) {
+    const data = props.data
 
     const renderOptions = () => {
-        const data = props.data
-
-        return data.map((category, index) => {
-            return(
-                <option value={category.id} key={index}>{category.name}</option>
-            )
-        })
+        if (data) {
+            return data.map((category, index) => {
+                return(
+                    <option value={category.id} key={index}>{category.name}</option>
+                )
+            })
+        }
     }
 
     return (
         <div>
 
-            <div className="formwrapper">
+            <div className="form">
             <h2>Create a New Madlib</h2>
             <form action="/madlibs" method="POST">
 
-                <label className="name" htmlFor="name">Name</label>
+                <label htmlFor="name">Name</label>
                 <input
                     type="text"
                     name="name"
                     id="name"
+                    // required
+                />
+                <label htmlFor="content">Text Content</label>
+                <input
+                    type="text"
+                    name="content"
+                    id="content"
                     // required
                 />
                 <label htmlFor="author">Author</label>
@@ -35,13 +43,6 @@ function CreateMadLib(props) {
                 <select id="genre" name="genre">
                     {renderOptions()}
                 </select>
-                <label htmlFor="content">Text Content</label>
-                <input 
-                    type="text"
-                    name="content"
-                    id="content"
-                    // required
-                />
                 <input type="submit"/>
             </form>
         </div>

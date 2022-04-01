@@ -7,17 +7,18 @@ function MadlibHome(props) {
     console.log(props.data)
     
 
-    const renderCatList = (data) => {
-        
-        // return data.map((category, index) => {
-        //     return (
-        //         <>
-        //             <div className='category' id={category.name} key={index} onClick={(e) => {renderMadList(e.target.id)}} style={{backgroundImage: `url(${category.img})`}}>
-        //                 {category.name}
-        //             </div>
-        //         </>
-        //     )
-        // })
+    const renderCatList = () => {
+        if (data) {
+            return data.map((category, index) => {
+                return (
+                    <>
+                        <div className='category' id={category.name} key={index} onClick={(e) => {renderMadList(e.target.id)}} style={{backgroundImage: `url(${category.img})`}}>
+                            {category.name}
+                        </div>
+                    </>
+                )
+            })
+        }
     }
 
     const renderMadList = (target) => {
@@ -37,10 +38,11 @@ function MadlibHome(props) {
 
     const renderMadLib = (e) => {
         let target = e.target.id
-        console.log(target)
 
         return (
-            <MadLib target={target} />
+            <>
+                <MadLib target={target} />
+            </>
         )
     }
 

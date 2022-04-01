@@ -1,12 +1,9 @@
 import './App.css';
-import React from 'react'
 import { BrowserRouter , Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
-import MadLib from './components/MadLib';
-import React, {Component} from "react"
 
 function App() {
   const [ data, setData ] = useState('')
@@ -16,17 +13,6 @@ function App() {
         .then((res) => res.json())
         .then((data) => setData(data))
 }, [data.name])
-
-// const renderMadLibHome = () => {
-//   if (data) {
-//     return (
-//       <>
-//         <MadlibHome data={data}/>
-//         <CreateMadLib data={data}/>
-//       </>
-//     )
-//   }
-// }  
 
   return (
     <div className="App">
@@ -48,7 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MadlibHome data={data} />} />
             <Route path="/home" element={<MadlibHome data={data}/>} />
-            <Route path="/madlib" element={<CreateMadLib />} />
+            <Route path="/create" element={<CreateMadLib data={data}/>} />
           </Routes>
         </BrowserRouter>
       </div>
