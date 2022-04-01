@@ -7,7 +7,7 @@ function MadLib(props) {
     useEffect(() => {
         fetch(`/madlibs/${target}`)
             .then((res) => console.log(res.json()))
-            // .then((madlib) => setMadlib(madlib))
+            .then((madlib) => setMadlib(madlib))
             .catch((err) => {
                 console.log(`there seems to be an err ${err}`)
             })
@@ -16,8 +16,6 @@ function MadLib(props) {
 
     const displayMadLib = () => {
         if (madlib) {
-            // console.log(madlib)
-            // console.log(madlib.name)
             return(
             <>
                 <h2>{madlib.name}</h2>

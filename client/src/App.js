@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
+import MadLib from './components/MadLib';
 
 function App() {
   const [ data, setData ] = useState('')
@@ -32,9 +33,10 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MadlibHome data={data} />} />
+            <Route path="/" element={<MadlibHome data={data}/>} />
             <Route path="/home" element={<MadlibHome data={data}/>} />
             <Route path="/create" element={<CreateMadLib data={data}/>} />
+            <Route path="/madlib" element={<MadLib />} />
           </Routes>
         </BrowserRouter>
       </div>
