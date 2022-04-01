@@ -1,5 +1,8 @@
 import './App.css';
+import React from 'react'
+import { BrowserRouter , Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
 import MadLib from './components/MadLib';
@@ -14,26 +17,44 @@ function App() {
         .then((data) => setData(data))
 }, [data.name])
 
-console.log(data)
-
-const renderMadLibHome = () => {
-  if (data) {
-    return (
-      <>
-        <MadlibHome data={data}/>
-        <CreateMadLib data={data}/>
-      </>
-    )
-  }
-}  
+// const renderMadLibHome = () => {
+//   if (data) {
+//     return (
+//       <>
+//         <MadlibHome data={data}/>
+//         <CreateMadLib data={data}/>
+//       </>
+//     )
+//   }
+// }  
 
   return (
     <div className="App">
-      <h1 className="title">WELCOME TO MADLIB MADNESS</h1>
-      {renderMadLibHome()}
-      <MadLib target={'62451de4e9b7eca7c160a213'}/>
+      <div className="background">
+        <Nav
+          className="justify-content-center"
+          defaultActiveKey="/home"
+          as="ul"
+        >
+          <Nav.Item as="li">
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link href="/create">Create Madlib</Nav.Link>
+          </Nav.Item>
+        </Nav>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MadlibHome data={data} />} />
+            <Route path="/home" element={<MadlibHome data={data}/>} />
+            <Route path="/madlib" element={<CreateMadLib />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
+
 
 export default App;
