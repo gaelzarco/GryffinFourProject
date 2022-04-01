@@ -1,10 +1,11 @@
 import './App.css';
+// import './style/main.scss'
 import { BrowserRouter , Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
-import MadLib from './components/MadLib';
+import Example from './components/Example';
 
 function App() {
   const [ data, setData ] = useState('')
@@ -29,6 +30,9 @@ function App() {
           <Nav.Item as="li">
             <Nav.Link href="/create">Create Madlib</Nav.Link>
           </Nav.Item>
+          <Nav.Item as='li'>
+            <Nav.Link href="/example"> Example Route</Nav.Link>
+          </Nav.Item>
         </Nav>
 
         <BrowserRouter>
@@ -36,7 +40,7 @@ function App() {
             <Route path="/" element={<MadlibHome data={data}/>} />
             <Route path="/home" element={<MadlibHome data={data}/>} />
             <Route path="/create" element={<CreateMadLib data={data}/>} />
-            <Route path="/madlib" element={<MadLib />} />
+            <Route path="/example" element={<Example />} />
           </Routes>
         </BrowserRouter>
       </div>
