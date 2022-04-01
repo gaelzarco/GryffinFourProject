@@ -1,5 +1,5 @@
 import './App.css';
-// import './style/main.scss'
+import './style/main.scss'
 import { BrowserRouter , Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Nav from "react-bootstrap/Nav"

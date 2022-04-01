@@ -29,6 +29,7 @@ function MadlibHome(props) {
 
     const renderMadLib = (e) => {
         let target = e.target.id
+        
 
         return (
                 <MadLib target={target} />
