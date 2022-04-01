@@ -1,5 +1,5 @@
 import './App.css';
-import './style/main.scss'
+// import './style/main.scss'
 import { BrowserRouter , Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Nav from "react-bootstrap/Nav"
@@ -37,7 +37,7 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MadlibHome data={data} />} />
+            <Route path="/" element={<MadlibHome data={data}/>} />
             <Route path="/home" element={<MadlibHome data={data}/>} />
             <Route path="/create" element={<CreateMadLib data={data}/>} />
             <Route path="/example" element={<Example />} />
