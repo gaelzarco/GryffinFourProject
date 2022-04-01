@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
 import MadLib from './components/MadLib';
+import React, {Component} from "react"
 
 function App() {
   const [ data, setData ] = useState('')
