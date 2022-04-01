@@ -4,7 +4,7 @@ const db = require('../models')
 db.Genre.create({
 
     name: 'Other',
-    img: 'https://keydifferences.com/wp-content/uploads/2018/10/other-vs-another.jpg'
+    img: 'https://gryffinfourproj.s3.us-west-1.amazonaws.com/biostatic.jpg'
 
 })
 .then(() => {

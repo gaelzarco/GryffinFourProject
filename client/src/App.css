@@ -5,6 +5,10 @@ html, body {
   width: 100%;
 }
 
+div {
+  text-align: center;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -165,13 +169,28 @@ li {
 
 /*Form Adjustments*/
 
-/*temporary Setup just so form is visible*/
-
-.form {
-  display: inline-flex;
-  text-align: center;
-  background-color: white;
+form {
+  display: grid;
+  place-items: center;
+  color:white;
   padding: 10px;
-  margin-left: 150px;
-  margin-right: 150px;
+}
+
+form, h2 {
+  color:white;
+  padding-top: 20px;
+}
+
+input, select {
+  width: 50%;
+  margin: 5px;
+}
+
+label {
+  padding: 5px;
+}
+
+input[type=submit] {
+width: 150px;
+margin-top: 10px;
 }
