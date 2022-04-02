@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.urlencoded({extended: true}))
 
 
-app.use(express.static(path.resolve(__dirname, '../client/build', 'index.html')))
+app.use(express.static(path.resolve(__dirname, './client/build',)))
 
 //Routes start
 app.get('/api', (req, res) => {
