@@ -1,16 +1,18 @@
 //Dependencies
 const express = require('express')
 const path = require('path')
+const cors = require('cors')
 
 
 //Configs and App Initilization
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 
 
-app.use(express.static(path.resolve(__dirname, '../client/build')))
+app.use(express.static(path.resolve(__dirname, '../client/build', 'index.html')))
 
 //Routes start
 app.get('/api', (req, res) => {
@@ -24,9 +26,8 @@ const madlibsController = require('./controllers/madlib_controllers')
 app.use('/madlibs', madlibsController)
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build'))
+    res.sendFile(path.resolve(__dirname, './client/build', "index.html" ))
 })
-
 
 
 // Port to listen on
