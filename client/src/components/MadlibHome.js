@@ -1,5 +1,4 @@
 import { useState } from "react"
-import MadLib from "./MadLib"
 
 function MadlibHome(props) {
     const [ listView, setListView ] = useState([])
@@ -40,21 +39,13 @@ function MadlibHome(props) {
         )
     }
 
-    const renderMadLib = (e) => {
-        let target = e.target.id
-
-        return (
-                <MadLib target={target} />
-        )
-    }
-
     return(
         <div key='category'>
             {listView.map((madlib, index) => {
                 // the listView state, which is the user's selected madlib category, is mapped over to return each madlib as a list item and is assigned its respective attributes. This list view is rendered above the category divs.
                 // renderMadLib is assigned to an onClick event for each list item and is supposed to render MadLib.js component
                 // renderMadLib is not currently functional.
-                return <li key={index} id={madlib._id} onClick={(e) => {renderMadLib(e)}}>{madlib.name}</li>
+                return <li key={index}><a key={index} id={madlib._id} href={`/${madlib._id}`}>{madlib.name}</a></li>
             })}
             <div className="wrapper">
                 {renderCatList()}

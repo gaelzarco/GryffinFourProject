@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
-function MadLib(props) {
+function MadLib() {
     const [ madlib, setMadlib ] = useState('')
-    const target = props.target
+    const { id } = useParams()
+
+    console.log(id)
 
     useEffect(() => {
-        fetch(`/madlibs/${target}`)
-            .then((res) => console.log(res.json()))
+        fetch(`/madlibs/${id}`)
+            .then((res) => res.json())
             .then((madlib) => setMadlib(madlib))
             .catch((err) => {
                 console.log(`there seems to be an err ${err}`)
             })
-    }, [target])
+    }, [id])
 
+    console.log(madlib)
 
     const displayMadLib = () => {
         if (madlib) {
