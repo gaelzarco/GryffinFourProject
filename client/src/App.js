@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
 import Example from './components/Example';
+import MadLib from'./components/MadLib';
 
 function App() {
   const [ data, setData ] = useState('')
@@ -41,6 +42,8 @@ function App() {
             <Route path="/home" element={<MadlibHome data={data}/>} />
             <Route path="/create" element={<CreateMadLib data={data}/>} />
             <Route path="/example" element={<Example />} />
+            <Route path="/madlib" element={<MadLib />} />
+              <Route path=":id" element={<MadLib />} />
           </Routes>
         </BrowserRouter>
       </div>
