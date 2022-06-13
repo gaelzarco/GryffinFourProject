@@ -42,9 +42,8 @@ function MadlibHome(props) {
     return(
         <div key='category'>
             {listView.map((madlib, index) => {
-                // the listView state, which is the user's selected madlib category, is mapped over to return each madlib as a list item and is assigned its respective attributes. This list view is rendered above the category divs.
-                // renderMadLib is assigned to an onClick event for each list item and is supposed to render MadLib.js component
-                // renderMadLib is not currently functional.
+                // the listView state, which is the user's selected madlib category, is mapped over to return each madlib as an anchor tag and is assigned its respective attributes
+                // an href is assigned to be used as req params in MadLib.js
                 return <li key={index}><a key={index} id={madlib._id} href={`/${madlib._id}`}>{madlib.name}</a></li>
             })}
             <div className="wrapper">

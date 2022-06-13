@@ -2,8 +2,6 @@ const express = require('express')
 const madlibs = express.Router()
 const db = require('../models')
 
-
- 
 //Home page that displays the Genres
 madlibs.get('/', (req, res) => {
     db.Genre.find()

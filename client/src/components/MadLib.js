@@ -5,8 +5,6 @@ function MadLib() {
     const [ madlib, setMadlib ] = useState('')
     const { id } = useParams()
 
-    console.log(id)
-
     useEffect(() => {
         fetch(`/madlibs/${id}`)
             .then((res) => res.json())
@@ -15,8 +13,6 @@ function MadLib() {
                 console.log(`there seems to be an err ${err}`)
             })
     }, [id])
-
-    console.log(madlib)
 
     const displayMadLib = () => {
         if (madlib) {
